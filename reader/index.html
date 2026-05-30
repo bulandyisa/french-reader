@@ -8,27 +8,26 @@
 </head>
 <body>
 <header id="bar">
-  <select id="book" title="Учебник"></select>
-  <div class="nav">
-    <button id="prev" title="Предыдущая (←)">‹</button>
-    <span id="pageinfo">
-      <input id="pagenum" type="text" inputmode="numeric" title="Введите номер страницы и нажмите Enter">
-      <span id="pagesep">/</span>
-      <span id="pagetotal">—</span>
-    </span>
-    <button id="next" title="Следующая (→)">›</button>
+  <div class="bar-inner">
+    <select id="book" title="Учебник"></select>
+    <div class="nav">
+      <button id="prev" title="Предыдущая (PageUp)">‹</button>
+      <span id="pageinfo">
+        <input id="pagenum" type="text" inputmode="numeric" title="Введите номер страницы и нажмите Enter">
+        <span id="pagesep">/</span>
+        <span id="pagetotal">—</span>
+      </span>
+      <button id="next" title="Следующая (PageDown)">›</button>
+    </div>
+    <label class="zoom">Размер
+      <input id="zoom" type="range" min="40" max="100" value="70">
+    </label>
+    <span id="trstate" class="badge"></span>
   </div>
-  <label class="zoom">Размер
-    <input id="zoom" type="range" min="40" max="100" value="70">
-  </label>
-  <span id="trstate" class="badge"></span>
 </header>
 
 <main id="stage">
-  <div id="pagewrap">
-    <img id="page" alt="">
-    <div id="overlay"></div>
-  </div>
+  <div id="pages"></div>
   <p id="hint">Выберите учебник вверху. Кликните по слову, чтобы увидеть перевод.</p>
 </main>
 
